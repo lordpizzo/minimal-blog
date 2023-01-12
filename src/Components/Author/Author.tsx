@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Avatar, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import { useNextSanityImage } from "next-sanity-image";
 import { IPost } from "src/IPost";
 import cliente from "src/sanity";
@@ -20,8 +20,9 @@ export default function Author({ post }: Props) {
 
 			<Flex direction="row" h='100%' pt={10} align="center">
 
-				<Image src={imageAuthor.src} borderRadius='full'
-					boxSize={[25, 50, 50]} alt="Author"></Image>
+				<Stack direction='row'>
+					<Avatar name={post.author.name} src={imageAuthor.src} />
+				</Stack>
 				<Flex direction="column" ml={[3, 6, 6]}>
 					<Text fontSize="medium" fontFamily="Josefin Sans">{post.author.name}</Text>
 				</Flex>
