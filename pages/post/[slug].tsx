@@ -1,4 +1,4 @@
-import { Flex, Image, ListItem, Text } from "@chakra-ui/react";
+import { Flex, Image, Text } from "@chakra-ui/react";
 import { useNextSanityImage } from "next-sanity-image";
 import Author from "src/Components/Author/Author";
 import { IPost } from "src/IPost";
@@ -20,7 +20,7 @@ export default function Post({ post }: Props) {
 	return (
 		<Flex direction="column" align="center" fontFamily="Josefin Sans">
 			<Flex direction="column" align="center">
-				<Text fontSize="xxx-large" as="b" >{post.title}</Text>
+				<Text fontSize="xxx-large" as="b" align="center">{post.title}</Text>
 				<Text >{post.subtitle}</Text>
 				<Author post={post} />
 			</Flex>

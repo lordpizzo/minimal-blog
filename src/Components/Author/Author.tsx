@@ -1,4 +1,4 @@
-import { Flex, Image, Text, Container } from "@chakra-ui/react";
+import { Flex, Image, Text } from "@chakra-ui/react";
 import { useNextSanityImage } from "next-sanity-image";
 import { IPost } from "src/IPost";
 import cliente from "src/sanity";
@@ -16,13 +16,18 @@ export default function Author({ post }: Props) {
 		year: "numeric"
 	}).format(newDate)
 	return (
-		<Flex direction="row" h='100%' pt={10}>
-			<Image src={imageAuthor.src} borderRadius='full'
-				boxSize={[25,50,50]} alt="Author"></Image>
-			<Flex direction="column" ml={[3,6,6]}>
-				<Text fontSize="medium"  fontFamily="Josefin Sans">{post.author.name}</Text>
-				<Text fontSize="medium" fontFamily="Josefin Sans">{formattedDate}</Text>
+		<Flex direction="column" ml={3}>
+
+			<Flex direction="row" h='100%' pt={10} align="center">
+
+				<Image src={imageAuthor.src} borderRadius='full'
+					boxSize={[25, 50, 50]} alt="Author"></Image>
+				<Flex direction="column" ml={[3, 6, 6]}>
+					<Text fontSize="medium" fontFamily="Josefin Sans">{post.author.name}</Text>
+				</Flex>
 			</Flex>
+			<Text fontSize="medium" fontFamily="Josefin Sans">{formattedDate}</Text>
+
 		</Flex>
 	)
 }

@@ -1,5 +1,4 @@
 import { Flex, Text } from '@chakra-ui/react'
-import styles from './Bar.module.scss'
 
 interface props {
 	bgcolor: string

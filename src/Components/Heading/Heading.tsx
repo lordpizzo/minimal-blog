@@ -14,9 +14,9 @@ export default function Heading() {
 	}
 	return (
 		<form onSubmit={submitHandler}>
-			<Flex w="100%" direction="row" align="flex-start" alignContent="center" alignItems="center" pl={[10,50,100]} pr={[10,50,100]} >
+			<Flex w="100%" direction={["column", "row", "row"]} align="flex-start" alignContent="center" alignItems="center" pl={[10,50,100]} pr={[10,50,100]} >
 				<Logo />
-				<Flex w="100%" align="flex-end" direction="row">
+				<Flex w="100%" align="flex-end" direction="row" mb={6}>
 					<Input alignItems="flex-end" variant="unstyled" type="text" name="search" id="search" placeholder="Buscar artigos" value={search} size="lg" fontSize="4xl" fontFamily="Josefin Sans" onChange={evento => setSearchState(evento.target.value)}></Input>
 					<Button size="lg" variant="ghost" onClick={submitHandler} >
 						<BiSearchAlt size="4xl" />

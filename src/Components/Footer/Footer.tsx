@@ -23,16 +23,16 @@ export default function Footer({ bgcolor }: props) {
 		</Link>
 	));
 	return (
-		<Flex direction="column" bg={bgcolor} mt={20} fontFamily="Josefin Sans">
-			<Flex direction="column" h={[300, 200, 300]} pl={[10,50,100]}  mt={20}>
-				<Flex direction="column">
+		<Flex direction="column" bg={bgcolor} mt={20} fontFamily="Josefin Sans" >
+			<Flex direction="column" h={[300, 200, 300]} pl={[10, 50, 100]} mt={20}>
+				<Flex direction="column" >
 					<Logo />
 					<Text as="p" w={[250, 200, 250]} >Compartilhando conhecimento sobre o mundo de tecnologia.</Text>
 					<Flex >
 						{renderSocial}
 					</Flex>
 				</Flex>
-				
+
 			</Flex>
 			<Text pl={0} align="center">Minimal Blog - Totos os direitos reservados</Text>
 		</Flex>

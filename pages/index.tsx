@@ -46,7 +46,7 @@ export default function Home(props: Props) {
 		)
 	return (
 		<Flex w="100%" h="100%" direction="column" align="center">
-			<Flex w="100%" direction="column" paddingRight={25} paddingLeft={25}>
+			<Flex w="100%" direction="column" paddingRight={5} paddingLeft={5}>
 				<Text as="h2" textAlign="center" fontSize="xx-large" fontFamily="Josefin Sans">Ultimos artigos do Minimal Blog</Text>
 				{renderPost}
 

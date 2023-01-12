@@ -5,7 +5,7 @@ export default function Logo() {
 	return (
 		<Flex w="100%" >
 			<Link href="/">
-				<Image src="/logo.svg" alt="Minimal Log" w={209} h={48} />
+				<Image src="/logo.svg" alt="Minimal Log" w={[409, 309, 309]} h={48} />
 			</Link>
 		</Flex>
 	)
